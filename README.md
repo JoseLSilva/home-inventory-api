@@ -31,7 +31,7 @@ Here are the test related scripts:
 ## 🛠️ Built with
 
 -  [Nest](https://github.com/nestjs/nest) - Nest framework
--  [MongoDB](https://www.mongodb.com/) - Database
+-  [MongoDB](https://github.com/mongodb/mongo) - Database
 
 ## Author
 
