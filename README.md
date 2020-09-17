@@ -20,7 +20,7 @@ npm install
 The scripts that can be used are defined in `package.json`
 
 -  `npm start` - Runs the compiler and a server at the same time.
--  `npm run start:dev` - Run the compiler and a server in development mode at the same time.
+-  `npm run start:dev` - Run the compiler and a server in "watch mode" at the same time.
 -  `npm run build` - Runs the TypeScript compiler once.
 
 Here are the test related scripts:
