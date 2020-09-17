@@ -15,7 +15,7 @@ describe('AppConfigService', () => {
 		service = module.get<AppConfigService>(AppConfigService);
 	});
 
-	it('should be number', () => {
+	it('should be a number', () => {
 		expect(typeof service.PORT).toBe('number');
 	});
 });

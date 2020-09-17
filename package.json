@@ -1,7 +1,7 @@
 {
 	"name": "home-inventory-api",
-	"version": "0.0.1",
-	"description": "",
+	"version": "0.0.2",
+	"description": "Home product management system",
 	"author": "José L Silva <jose@silva.app> (https://silva.app/)",
 	"private": true,
 	"license": "MIT",
