@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigAppModule } from './config/config.app.module';
 import { MongodbConfigService } from './config/database/mongodb/mongodb.config.service';
 import { ShapeModule } from './shape/shape.module';
+import { SizeModule } from './size/size.module';
 
 @Module({
 	imports: [
@@ -18,6 +19,7 @@ import { ShapeModule } from './shape/shape.module';
 		}),
 		ConfigAppModule,
 		ShapeModule,
+		SizeModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

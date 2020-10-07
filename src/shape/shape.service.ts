@@ -20,21 +20,16 @@ export class ShapeService {
 	}
 
 	async readOne(_id: string): Promise<IShape> {
-		const shape = await this.shapeModel.findOne({ _id });
-		return shape;
+		return await this.shapeModel.findOne({ _id });
 	}
 
 	async update(_id: string, updateShape: CreateShapeDto): Promise<IShape> {
-		const updatedShape = await this.shapeModel.findOneAndUpdate(
-			{ _id },
-			updateShape,
-			{ new: true },
-		);
-		return updatedShape;
+		return await this.shapeModel.findOneAndUpdate({ _id }, updateShape, {
+			new: true,
+		});
 	}
 
 	async delete(_id: string): Promise<IShape> {
-		const deletedShape = await this.shapeModel.findByIdAndDelete({ _id });
-		return deletedShape;
+		return await this.shapeModel.findByIdAndDelete({ _id });
 	}
 }
