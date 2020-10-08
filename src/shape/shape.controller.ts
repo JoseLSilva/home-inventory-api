@@ -25,9 +25,9 @@ export class ShapeController {
 		@Body() createShapeDto: CreateShapeDto,
 		@Res() res: Response,
 	): Promise<Response> {
-		const newShape = await this.shapeService.create(createShapeDto);
+		const new_shape = await this.shapeService.create(createShapeDto);
 		return res.json({
-			newShape,
+			new_shape,
 			message: 'Shape successfully created',
 			status_code: HttpStatus.CREATED,
 		});
@@ -68,9 +68,12 @@ export class ShapeController {
 		@Body() updateShape: CreateShapeDto,
 		@Res() res: Response,
 	): Promise<Response> {
-		const updatedShape = await this.shapeService.update(shapeID, updateShape);
+		const updated_shape = await this.shapeService.update(
+			shapeID,
+			updateShape,
+		);
 		return res.json({
-			updatedShape,
+			updated_shape,
 			message: 'Shape successfully updated',
 			status_code: HttpStatus.OK,
 		});
@@ -82,9 +85,9 @@ export class ShapeController {
 		@Param('shapeID') shapeID: string,
 		@Res() res: Response,
 	): Promise<Response> {
-		const deletedShape = await this.shapeService.delete(shapeID);
+		const deleted_shape = await this.shapeService.delete(shapeID);
 		return res.json({
-			deletedShape,
+			deleted_shape,
 			message: 'Shape successfully deleted',
 			status_code: HttpStatus.OK,
 		});
