@@ -20,10 +20,7 @@ export class SizeService {
 	}
 
 	async readOne(_id: string): Promise<ISize> {
-		const size = await this.sizeModel
-			.findOne({ _id })
-			.populate('shape_id', 'name');
-		return size;
+		return await this.sizeModel.findOne({ _id }).populate('shape_id', 'name');
 	}
 
 	async update(_id: string, updateSize: CreateSizeDto): Promise<ISize> {

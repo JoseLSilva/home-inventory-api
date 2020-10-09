@@ -25,9 +25,9 @@ export class SizeController {
 		@Body() createSizeDto: CreateSizeDto,
 		@Res() res: Response,
 	): Promise<Response> {
-		const newSize = await this.sizeService.create(createSizeDto);
+		const new_size = await this.sizeService.create(createSizeDto);
 		return res.json({
-			newSize,
+			new_size,
 			message: 'Size successfully created',
 			status_code: HttpStatus.CREATED,
 		});
@@ -68,9 +68,9 @@ export class SizeController {
 		@Body() updateSize: CreateSizeDto,
 		@Res() res: Response,
 	): Promise<Response> {
-		const updatedSize = await this.sizeService.update(sizeID, updateSize);
+		const updated_size = await this.sizeService.update(sizeID, updateSize);
 		return res.json({
-			updatedSize,
+			updated_size,
 			message: 'Size successfully updated',
 			status_code: HttpStatus.OK,
 		});
@@ -82,9 +82,9 @@ export class SizeController {
 		@Param('sizeID') sizeID: string,
 		@Res() res: Response,
 	): Promise<Response> {
-		const deletedSize = await this.sizeService.delete(sizeID);
+		const deleted_size = await this.sizeService.delete(sizeID);
 		return res.json({
-			deletedSize,
+			deleted_size,
 			message: 'Size successfully deleted',
 			status_code: HttpStatus.OK,
 		});
